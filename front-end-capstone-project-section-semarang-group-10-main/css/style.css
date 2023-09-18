@@ -1,0 +1,618 @@
+/*-----------------------------------------------------------------
+Global
+-----------------------------------------------------------------*/
+html,
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-image: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+p {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #afafaf;
+}
+
+/*-----------------------------------------------------------------
+Navigasi Bar
+-----------------------------------------------------------------*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.navbar-logo {
+  width: 150px;
+  height: auto;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 5px;
+  padding: 10px 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.5s;
+}
+
+.nav-link:hover {
+  color: #fdbd58;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav a.aktif {
+  color: #fdbd58;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-logo {
+    margin-bottom: 20px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav.show {
+    display: flex;
+  }
+}
+
+
+/* -----------------------------------------------------------------
+Style - Tampilan Home
+----------------------------------------------------------------- */
+.home {
+  display: flex;
+  align-items: center;
+  padding: 150px;
+  padding-bottom: 150px;
+  background-color: #ffffff;
+}
+
+.home-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.home-text h1 {
+  font-size: 42px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.home-text p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.home-image {
+  max-width: 50%;
+  padding: 20px;
+}
+
+.home-image img {
+  max-width: 80%;
+  border-radius: 15px;
+  border: 3px solid #000000;
+  padding: 5px;
+}
+
+.home-image {
+  position: relative;
+  overflow: hidden;
+}
+
+#imgHomeUbah {
+  opacity: 0;
+  transition: opacity 3.5s ease-in-out;
+}
+
+#imgHomeUbah.tampil {
+  opacity: 1;
+}
+
+
+/*-----------------------------------------------------------------
+Promo 
+-----------------------------------------------------------------*/
+.promo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-bottom: 80px;
+  background-color: #fdbd58;
+}
+
+.promo-content {
+  display: flex;
+  align-items: center; 
+  max-width: 1200px;
+  width: 100%;
+}
+
+.promo-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.fade-masuk {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-keluar {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.promo-image img {
+  max-width: 100%;
+  max-height: 700px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.promo-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+.promo-text p {
+  font-size: 12pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2.5px solid #000000;
+  border-radius: 10px;
+  color: #000000;
+}
+
+.promo-text h1 {
+  font-size: 22pt;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2.5px solid #000000;
+  border-radius: 10px;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .promo-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promo-text {
+    padding: 10px;
+  }
+  
+  .promo-text h1 {
+    font-size: 1.5em;
+  }
+}
+
+
+/* -----------------------------------------------------------------
+Style - Card Program
+----------------------------------------------------------------- */
+.program h1 {
+  font-size: 32px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;  
+  padding: 150px;
+  padding-bottom: 20px;
+  padding-left: 150px;
+}
+
+.program-2 h1 {
+  font-size: 32px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300; 
+  padding-top: 50px; 
+  padding-bottom: 20px;
+  padding-left: 150px;
+}
+
+.program-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.kartu-program {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.kartu-program img {
+  max-width: 100%;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.kartu-program h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.kartu-program p {
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.program-bottom {
+  font-weight: 300; 
+  padding-top: 50px; 
+  padding-bottom: 120px;
+  padding-right: 20px;
+  margin-right: 150px;
+  text-align: right;
+}
+
+.button-program a {
+  padding: 10px;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #fdbd58;
+  background: linear-gradient(105deg, #fdbd58 0%, #ff9d00 100%);
+  letter-spacing: 0.3px;
+}
+
+.button-program a:hover {
+  color: #fff;
+  background: #ff9d00;
+}
+
+
+/*-----------------------------------------------------------------
+Layanan
+-----------------------------------------------------------------*/
+.layanan {
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-bottom: 100px;
+  background-color: #fdbd58;
+}
+
+.layanan img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.layanan ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layanan li {
+  padding: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13pt;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+
+/*----------------------------------------------------------------- 
+Mitra
+---------------------------------------------------------------- */
+/* Style untuk judul */
+.mitra-judul h1 {
+  font-size: 32px; 
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding: 80px;
+  padding-top: 120px;
+  padding-bottom: 30px;
+}
+
+.mitra-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.mitra-img {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mitra-img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.mitra-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  background-color: #fdbd58;
+}
+
+.mitra-icon i {
+  font-size: 50px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .mitra-judul h1 {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .mitra-container {
+    max-width: 100%;
+  }
+
+  .mitra-img {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mitra-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mitra-icon i {
+    font-size: 24px;
+  }
+}
+
+/*----------------------------------------------------------------- 
+Style - Hubungi Kami - Content 
+---------------------------------------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 95px;
+  margin-top: 5px;
+}
+label {
+  font-weight: bold;
+}
+input[type="text"],
+textarea {
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 2px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.hubungi-container{
+  width: 60%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;  
+  font-size: large;
+}
+.information{
+  text-align: center;
+  color: #000000;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.submit-button {
+  background-color: #007bff; 
+  color: #ffffff; 
+  font-size: 15px; 
+  padding: 10px 20px; 
+  border: none;
+  cursor: pointer; 
+  font-weight: bold;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-left: 95px;
+}
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/*----------------------------------------------------------------- 
+Style - Footer - Content 
+---------------------------------------------------------------- */
+footer {
+  background-color: #111;
+  width: 100%;
+  margin-top: 80px;
+}
+.footer-container {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+.socialicons {
+  display: flex;
+  justify-content: center;
+}
+.socialicons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialicons a {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+.socialicons a:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+.socialicons a:hover {
+  color: white;
+  transition: 0.5s;
+}
+
+.footerBottom {
+  background-color: #000;
+  padding: 0;
+  text-align: center;
+}
+.footerBottom p {
+  color: white;
+}
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+/*----------------------------------------------------------------- 
+Footer Cadangan 
+---------------------------------------------------------------- */
+/* .footer {
+  background-color: #fdbd58;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-icon {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.footer-icon a{
+  color: #ffffff;
+  text-decoration: none
+}
+
+.fa {
+  font-size: inherit;
+}
+
+.copyright {
+  margin-top: 20px;
+  text-decoration: none;
+}
+.copyright a {
+  font-size: 12pt;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+} */
